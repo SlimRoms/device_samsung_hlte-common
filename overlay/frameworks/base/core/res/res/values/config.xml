@@ -238,9 +238,6 @@
 
     <bool name="config_enableWifiDisplay">true</bool>
 
-    <!-- Panel auto-brightness configuration value -->
-    <integer name="config_panelAutoBrightnessValue">1</integer>
-
     <!-- Device supports LED flashlight 
     <bool name="config_enableTorch">true</bool-->
 
