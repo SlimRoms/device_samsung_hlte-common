@@ -49,6 +49,15 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 #GPS
 TARGET_PROVIDES_GPS_LOC_API := true
 
+# Camera
+TARGET_PROVIDES_CAMERA_HAL := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+
+# CMHW
+BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/hlte-common/cmhw
+>>>>>>> 368a527... hlte-common: Move camera wrapper to device repo.
+
 # Graphics
 TARGET_HAVE_NEW_GRALLOC := true
 BOARD_USES_LEGACY_MMAP := true
