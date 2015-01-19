@@ -49,17 +49,13 @@ on fs
     # these partition flashed on the device. Failure to mount any partition in fstab file
     # results in failure to launch late-start class.
 
-#    wait /dev/block/platform/msm_sdcc.1/by-name/cache
-#    check_fs /dev/block/platform/msm_sdcc.1/by-name/cache ext4
-#    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cache /cache nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
-
     wait /dev/block/platform/msm_sdcc.1/by-name/persist
     check_fs /dev/block/platform/msm_sdcc.1/by-name/persist ext4
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev noatime data=ordered,nomblk_io_submit,noauto_da_alloc,errors=panic
 
     wait /dev/block/platform/msm_sdcc.1/by-name/efs
     check_fs /dev/block/platform/msm_sdcc.1/by-name/efs ext4
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/efs /efs nosuid nodev noatime data=ordered,nomblk_io_submit,noauto_da_alloc,errors=panic
     chown system radio /efs
      chmod 0771 /efs
 #firmware_file
