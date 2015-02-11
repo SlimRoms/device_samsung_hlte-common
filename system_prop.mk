@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.nfc.port=I2C
+   ro.nfc.port=I2C
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -32,9 +32,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.lte_vrat_report=1 \
-    persist.radio.mode_pref_nv10=1
+    persist.radio.mode_pref_nv10=1 \
+
+# Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sensors=1
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-    wifi.supplicant_scan_interval=15
