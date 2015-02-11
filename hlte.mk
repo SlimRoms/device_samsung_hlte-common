@@ -119,7 +119,6 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
     macloader \
     hostapd \
     hostapd_default.conf \
