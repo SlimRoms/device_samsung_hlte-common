@@ -21,6 +21,9 @@
     <!-- Display carrier settings menu if true -->
     <bool name="config_carrier_settings_enable">false</bool>
 
+    <!-- Show APN Settings for CDMA carriers -->
+    <bool name="config_show_apn_setting_cdma">true</bool>
+
     <!-- Determine whether calls to mute the microphone in PhoneUtils
                   are routed through the android.media.AudioManager class (true) or through
          the com.android.internal.telephony.Phone interface (false). -->
