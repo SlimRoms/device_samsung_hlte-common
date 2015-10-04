@@ -8,7 +8,7 @@
 /sys/devices/virtual/camera(/.*)?                       u:object_r:sysfs_camera:s0
 
 # CMHW
-/sys/devices/virtual/timed_output/vibrator(/.*)?        u:object_r:sysfs_vibeamp:s0
+/sys/class/timed_output/vibrator(/.*)?                  u:object_r:sysfs_vibeamp:s0
 /sys/class/sec/sec_touchkey/keypad_enable               u:object_r:sysfs_display:s0
 
 # Display
