@@ -102,6 +102,9 @@ on post-fs-data
     chmod 0775 /efs/.files/.dm33
     chmod 0775 /efs/.files/.mp301
 
+# yank555.lu kernel config permissions
+    chmod 0700 /system/etc/init.yank555.lu.kernel.sh
+
 # h2k permission
     chmod 0644 /efs/redata.bin
     chown radio radio /efs/h2k.dat
@@ -549,4 +552,11 @@ service audiod /system/bin/audiod
    class late_start
    user system
    group system
+
+# Start yank555.lu kernel configuration
+service yank555-kernel /system/bin/sh /system/etc/init.yank555.lu.kernel.sh
+   class late_start
+   user root
+   group root
+   oneshot
 

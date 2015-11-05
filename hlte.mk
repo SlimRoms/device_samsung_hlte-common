@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Add kernel config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/kernel/init.yank555.lu.kernel.sh:system/etc/init.yank555.lu.kernel.sh
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
